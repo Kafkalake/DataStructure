@@ -1,0 +1,53 @@
+syntax = "proto3";
+
+package com.hooniegit.DataStructure;
+
+option java_multiple_files = true;
+
+// Tag<Integer> : State
+message IntegerTag {
+    int32 id = 1;
+    int32 value = 2;
+}
+
+// Tag<Double> : Tag
+message DoubleTag {
+    int32 id = 1;
+    double value = 2;
+}
+
+// Tag<String> : Step, Condition
+message StringTag {
+    int32 id = 1;
+    string value = 2;
+}
+
+// Tag<Boolean> : PMMode
+message BooleanTag {
+    int32 id = 1;
+    bool value = 2;
+}
+
+// Group<Integer>
+message IntegerGroup {
+    repeated IntegerTag group = 1;
+    string timestamp = 2;
+}
+
+// Group<Double>
+message DoubleGroup {
+    repeated DoubleTag group = 1;
+    string timestamp = 2;
+}
+
+// Group<String>
+message StringGroup {
+    repeated StringTag group = 1;
+    string timestamp = 2;
+}
+
+// Group<Boolean>
+message BooleanGroup {
+    repeated BooleanTag group = 1;
+    string timestamp = 2;
+}
